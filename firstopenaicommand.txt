@@ -1,0 +1,4 @@
+ Using OpenAI / whisper - I want you to develop that understand its contents.  I have some idea I would like to implement to my existing project ideas. I recorded the idea on my phone, and normally I would copy/paste the transcript. But I would like to shortcut that, and add to a specific folder. I want you to either give me a code that will do it, or you look at it yourself.
+if you look into the memos yourself i want you to do the following:
+make a transcript out of it - extract mainly the conversation regarding the TrafficTpp project only. I do not side tracked too much but I do sometimes. Make a detailed summary to me first. Then, recommend a way to implement the plan.
+so answer the first question, and show me you understand the plan
