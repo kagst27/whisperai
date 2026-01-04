@@ -33,6 +33,8 @@ INPUT_DIR=G:\\VoiceMemo
 OUTPUT_DIR=G:\\VoiceMemo\\transcripts
 MODEL_NAME=base
 WATCH_MODE=true
+IPHONE_SUBDIR=transcript_iphone
+COMPARE_OUTPUT_DIR=G:\\VoiceMemo\\transcripts\\comparisons
 ```
 
 ### Audio file types
@@ -54,6 +56,23 @@ Each transcript is written as `*.html` in the output folder. Example:
 ```
 G:\VoiceMemo\transcripts\my_memo.html
 ```
+
+## Compare transcripts (original vs. iPhone)
+Place your original transcripts in `OUTPUT_DIR` and the iPhone copy/pasted versions in
+`OUTPUT_DIR\\transcript_iphone`. The iPhone versions should use the same base filename,
+ending in `_iphone` (for example: `idea.html` and `idea_iphone.html`).
+
+Generate comparisons:
+```bash
+python compare_transcripts.py
+```
+
+Custom directories:
+```bash
+python compare_transcripts.py --transcripts-dir "G:\\VoiceMemo\\transcripts" --iphone-dir "G:\\VoiceMemo\\transcripts\\transcript_iphone" --output-dir "G:\\VoiceMemo\\transcripts\\comparisons"
+```
+
+Comparison reports are written as `*_comparison.txt` files in `COMPARE_OUTPUT_DIR`.
 
 ## Notes
 - Larger Whisper models are slower but more accurate. Edit `MODEL_NAME` in `.env` as needed.
